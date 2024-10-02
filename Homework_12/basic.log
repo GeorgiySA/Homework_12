@@ -1,0 +1,164 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Открывал главную страницу
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2024 20:21:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2024 20:21:48] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2024 20:21:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2024 20:21:53] "[33mGET /post_by_tag.html?s=айкидо HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2024 20:22:04] "[33mGET /post_form.html HTTP/1.1[0m" 404 -
+INFO:root:Открывал главную страницу
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2024 20:23:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2024 20:23:03] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /search [GET]
+Traceback (most recent call last):
+  File "C:\Users\Master\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Master\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Master\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Master\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Master\PycharmProjects\pythonProject\lesson_code\Homework_12\Homework_12\main\views.py", line 20, in search_page
+    post = search_content(s)
+  File "C:\Users\Master\PycharmProjects\pythonProject\lesson_code\Homework_12\Homework_12\functions.py", line 10, in search_content
+    return [i for i in load_json() if form.lower() in i['content'].lower()]
+  File "C:\Users\Master\PycharmProjects\pythonProject\lesson_code\Homework_12\Homework_12\functions.py", line 6, in load_json
+    return json.load(file)
+  File "C:\Users\Master\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "C:\Users\Master\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\Master\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\Master\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2024 20:23:12] "[35m[1mGET /search HTTP/1.1[0m" 500 -
+INFO:root:Открывал главную страницу
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2024 20:24:26] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2024 20:24:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2024 20:24:27] "[33mGET /post_form.html HTTP/1.1[0m" 404 -
+INFO:root:Открывал главную страницу
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2024 23:26:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2024 23:26:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2024 23:26:30] "[33mGET /post_form.html HTTP/1.1[0m" 404 -
+INFO:root:Открывал главную страницу
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2024 23:26:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2024 23:26:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [01/Oct/2024 23:26:47] "[33mGET /post_by_tag.html?s=айкидо HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Открывал главную страницу
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:09:37] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:09:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:09:41] "[33mGET /post_by_tag.html?s=айкидо HTTP/1.1[0m" 404 -
+INFO:root:Открывал главную страницу
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:09:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:09:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:09:46] "[33mGET /post_form.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:09:52] "[33mGET /post_by_tag.html?s=fudytsreaw HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Открывал главную страницу
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:23:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:23:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:23:38] "[33mGET /post_form.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:23:44] "[33mGET /post_by_tag.html?s=айкидо HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Открывал главную страницу
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:27:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:27:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:27:30] "[33mGET /post_form.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:27:37] "[33mGET /post_form.html HTTP/1.1[0m" 404 -
+INFO:root:Открывал главную страницу
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:28:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:28:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:28:33] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:28:33] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Ошибка с расширением файла
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:29:09] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:29:47] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:29:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+ERROR:root:Oшибка загрузки
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:31:01] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:31:11] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:31:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+ERROR:root:Oшибка загрузки
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:31:36] "POST /post HTTP/1.1" 200 -
+ERROR:app:Exception on /search [GET]
+Traceback (most recent call last):
+  File "C:\Users\Master\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Master\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Master\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Master\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Master\PycharmProjects\pythonProject\lesson_code\Homework_12\Homework_12\main\views.py", line 22, in search_page
+    post = search_content(s)
+  File "C:\Users\Master\PycharmProjects\pythonProject\lesson_code\Homework_12\Homework_12\functions.py", line 10, in search_content
+    return [i for i in load_json() if form.lower() in i['content'].lower()]
+  File "C:\Users\Master\PycharmProjects\pythonProject\lesson_code\Homework_12\Homework_12\functions.py", line 6, in load_json
+    return json.load(file)
+  File "C:\Users\Master\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "C:\Users\Master\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\Master\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\Master\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:32:11] "[35m[1mGET /search HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /search [GET]
+Traceback (most recent call last):
+  File "C:\Users\Master\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Master\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Master\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Master\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Master\PycharmProjects\pythonProject\lesson_code\Homework_12\Homework_12\main\views.py", line 22, in search_page
+    post = search_content(s)
+  File "C:\Users\Master\PycharmProjects\pythonProject\lesson_code\Homework_12\Homework_12\functions.py", line 10, in search_content
+    return [i for i in load_json() if form.lower() in i['content'].lower()]
+  File "C:\Users\Master\PycharmProjects\pythonProject\lesson_code\Homework_12\Homework_12\functions.py", line 6, in load_json
+    return json.load(file)
+  File "C:\Users\Master\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "C:\Users\Master\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\Master\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\Master\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:32:36] "[35m[1mGET /search HTTP/1.1[0m" 500 -
+INFO:root:Открывал главную страницу
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:32:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Oct/2024 00:32:38] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Открывал главную страницу
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2024 01:26:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2024 01:26:58] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2024 01:26:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2024 01:27:02] "[33mGET /post_form.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2024 01:27:12] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Oct/2024 01:27:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
